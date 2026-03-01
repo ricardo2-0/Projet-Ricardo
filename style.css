@@ -1,0 +1,166 @@
+/* Variables de couleurs professionnelles */
+:root {
+    --dark-blue: #1a2a6c;
+    --light-blue: #0052D4;
+    --sidebar-bg: #2c3e50;
+    --text-main: #333;
+    --text-light: #ecf0f1;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.cv-wrapper {
+    width: 100%;
+    max-width: 900px;
+    background: white;
+    display: flex;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 1000px;
+}
+
+/* SIDEBAR (Gauche) */
+.sidebar {
+    width: 35%;
+    background-color: var(--sidebar-bg);
+    color: var(--text-light);
+    padding: 40px 25px;
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profile-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 4px solid var(--light-blue);
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.job-title {
+    font-size: 0.9rem;
+    color: #bdc3c7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.side-title {
+    border-bottom: 2px solid var(--light-blue);
+    padding-bottom: 8px;
+    margin-top: 30px;
+    font-size: 1.1rem;
+}
+
+.contact-section a {
+    color: var(--light-blue);
+    text-decoration: none;
+}
+
+/* Barres de progression pour les langues */
+.lang-item {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.bar {
+    background: #455a64;
+    height: 8px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.progress {
+    background: var(--light-blue);
+    height: 100%;
+    border-radius: 5px;
+}
+
+/* CONTENU PRINCIPAL (Droite) */
+.main-content {
+    width: 65%;
+    padding: 40px;
+    color: var(--text-main);
+}
+
+.full-name {
+    font-size: 2.2rem;
+    color: var(--dark-blue);
+    margin-bottom: 10px;
+}
+
+.full-name span {
+    font-weight: 300;
+}
+
+.section-title {
+    color: var(--dark-blue);
+    font-size: 1.3rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* Timeline Formation */
+.timeline {
+    border-left: 2px solid #ddd;
+    padding-left: 20px;
+}
+
+.item {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.item::before {
+    content: "";
+    position: absolute;
+    left: -27px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background: var(--light-blue);
+    border-radius: 50%;
+}
+
+.date {
+    font-weight: bold;
+    color: var(--light-blue);
+}
+
+/* Loisirs */
+.hobbies-grid {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hobby {
+    background: #f8f9fa;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+    font-weight: 500;
+}
+
+/* Adaptabilité Mobile */
+@media (max-width: 768px) {
+    .cv-wrapper {
+        flex-direction: column;
+    }
+    .sidebar, .main-content {
+        width: 100%;
+    }
+}
